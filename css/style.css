@@ -236,12 +236,12 @@ nav a:hover {
 /* popup */
 .popup {
     width: 90vw;
-    height: 80vh;
+    height: 78vh;
     position: fixed;
     top: 15vh;
     left: 5%;
     background: #181715;
-    z-index: 2;
+    z-index: 9999;
     border-radius: 5px;
     box-shadow: 0 0 0 1000px rgba(0, 0, 0, 0.438);
     text-align: center;
@@ -250,7 +250,7 @@ nav a:hover {
 
 .top {
     width: 100%;
-    height: 20%;
+    height: 15%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -341,7 +341,6 @@ nav a:hover {
     width: 100%;
 }
 
-/* Grid de habitaciones corregido */
 .rooms-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -701,25 +700,35 @@ footer img {
 
     /* popup */
     .popup {
-        width: 80vw;
-        height: 80vh;
-        position: fixed;
-        top: 15%;
-        left: 10%;
-        background: #181715;
-        z-index: 2;
-        border-radius: 5px;
-        box-shadow: 0 0 0 1000px rgba(0, 0, 0, 0.438);
-        text-align: center;
-        visibility: hidden;
+          width: 90vw;
+    height: 70vh;
+    position: fixed;
+    top: 15vh;
+    left: 5%;
+    background: #181715;
+    z-index: 9999;
+    border-radius: 5px;
+    box-shadow: 0 0 0 1000px rgba(0, 0, 0, 0.438);
+    text-align: center;
+    visibility: hidden;
     }
+.rooms-grid {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    max-width: 768px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    width: 100%;
 
+}
     .top {
         width: 100%;
-        height: 20%;
+        height: 15%;
         display: flex;
         justify-content: center;
         align-items: center;
+        margin-top: 5%;
     }
 
     .top h1 {
@@ -728,7 +737,8 @@ footer img {
         margin: 0;
     }
 
-    .top i {
+
+     .top i {
         font-size: 2.4em;
         position: absolute;
         right: 5%;
@@ -737,7 +747,7 @@ footer img {
 
     .popup form {
         width: 100%;
-        height: 80%;
+        height: 85%;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -760,13 +770,14 @@ footer img {
     .popup form input {
         width: 60%;
         padding: 1%;
-        margin-top: 7%;
+        margin-top:2%;
         outline: none;
         border: none;
         background: none;
         border-bottom: 2px solid white;
         color: white;
     }
+    
 
     .popup form #res {
         background: var(--botones);
@@ -786,7 +797,6 @@ footer img {
     .contenedos_Cuartos {
         text-align: center;
         display: flex;
-        flex-direction: column;
         align-items: center;
         width: 100%;
     }
@@ -799,13 +809,7 @@ footer img {
         width: 100%;
     }
 
-    .rooms-grid {
-        display: flex;
-        gap: 2rem;
-        margin: 1rem;
-        width: 100%;
-        max-width: 1200px;
-    }
+   
 header h1 {
     font-size: 70px;
 }
@@ -859,7 +863,6 @@ header h1 {
     }
 
     .cuarto1 {
-        width: 50%;
         padding: 1.5rem;
         border-radius: 8px;
         text-align: center;
@@ -869,6 +872,7 @@ header h1 {
     }
 
     .cuarto2 {
+
         padding: 1.5rem;
         border-radius: 8px;
         text-align: center;
@@ -878,6 +882,7 @@ header h1 {
     }
 
     .cuarto3 {
+
         padding: 1.5rem;
         border-radius: 8px;
         text-align: center;
@@ -887,6 +892,7 @@ header h1 {
     }
 
     .cuarto4 {
+
         padding: 1.5rem;
         border-radius: 8px;
         text-align: center;
@@ -896,10 +902,11 @@ header h1 {
     }
 
     /* Sección Quiénes Somos */
-    .quienes-somos {
-        padding: 40px 20px;
-        text-align: center;
-    }
+        .quienes-somos {
+            max-width: 1500px;
+            margin: 0 auto;
+            width: 100%;            
+        }
 
     .quienes-somos h1 {
         font-family: 'Plane', sans-serif;
@@ -908,20 +915,19 @@ header h1 {
         margin-bottom: 30px;
     }
 
-    .features-container {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 20px;
-        max-width: 1200px;
-        margin: 0 auto 40px;
+  .features-container {
+            display: flex;
+            gap: 3%;
 
-    }
+        }
 
     .box {
         border: 2px solid white;
         padding: 20px;
         border-radius: 6px;
         text-align: center;
+        display: grid;
+        width: 100%; 
     }
 
     .icon {
@@ -935,28 +941,30 @@ header h1 {
 
     .texto-final2 {
         text-align: justify;
-        font-size: 1.2rem;
-        line-height: 1.3;
         width: 100%;
-        margin-left: 4%;
+        margin-left: 2%;
 
     }
-
-    .texto-final {
+   
+    .texto-final  {
         text-align: justify;
-        font-size: 1rem;
         line-height: 1.6;
-        width: 40%;
-        margin-left: 35%;
-        margin-top: 3%;
+        width: 50%;
+        margin-left: 48%;
+        margin-top: 9%;
     }
-
+ .texto-final p {
+    font-size: 1em;
+    margin-top: 1%;
+    }
     .imagen {
-        width: 10px;
-    }
+        margin-top: 1%;
+        width: 90%;
+        display: grid;
+        margin-left: -380px;
+        margin-bottom: -380px;    }
 
     .imagen img {
-        float: left;
 
     }
 
@@ -1285,7 +1293,7 @@ header h1 {
     .rooms-grid {
         grid-template-columns: repeat(3, 1fr); /* 3 columnas en desktop */
     }
-}
+
 .room-info{
     margin-left: 50%;
     font-family: 'Leander', sans-serif;
@@ -1299,7 +1307,65 @@ header h1 {
             margin: 0 auto;
             width: 100%;            
         }
+           .popup {
+        width: 50%;
+        height: 80vh;
+        position: fixed;
+        top: 15%;
+        left: 25%;
+        background: #181715;
+        z-index: 9999;
+        border-radius: 5px;
+        box-shadow: 0 0 0 1000px rgba(0, 0, 0, 0.438);
+        text-align: center;
+        visibility: hidden;
+    font-family: 'Crafter', sans-serif;
+
+    }
+
+    .top {
+        width: 100%;
+        height: 20%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .top h1 {
+        font-family: 'Plane', sans-serif;
+        font-weight: normal;
+        margin: 0;
+    }
+
+    .top i {
+        font-size: 2.4em;
+        position: absolute;
+        right: 5%;
+        cursor: pointer;
         
+    }
+
+    .popup form {
+        width: 100%;
+        height: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .popup form select {
+        width: 60%;
+        padding: 1%;
+        background: none;
+        outline: none;
+        border: none;
+        border-bottom: 2px solid white;
+        color: white;
+    }
+
+    .popup form select option {
+        background: #202020;
+    }
         
         .features-container {
             display: flex;
