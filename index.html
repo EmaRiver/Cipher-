@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="shortcut icon" href="img/eye icon.ico" type="image/x-icon">
-    <title>Cipher Escape Rooms</title>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <title>Cipher Incio</title>
 </head>
 <body>
     <!-- Header -->
@@ -20,173 +21,30 @@
 
 
             <nav class="nav-menu">
-                <a href="#inicio">Inicio</a>
-                <a href="#escape-rooms">Escape Rooms</a>
-                <a href="#quienes-somos">¿Quiénes Somos?</a>
-                <a href="#galeria">Galería</a>
+                <a href="index.html">Inicio</a>
+                <a href="index2.html">Escape Rooms</a>
+                <a href="index3.html">¿Quiénes Somos?</a>
+            
             </nav>
         </div>
     </header>
 
     <!-- Sección Principal -->
-    <section class="contenedor" id="inicio">
+    <div class="color"><section class="contenedor" id="inicio">
         <h1>bienvenido</h1>
         <div class="text-principio">
             <p>Prepárate para vivir una aventura llena de misterio y emoción. ¡Desafía tu mente y escapa ya!</p>
         </div>
         <div class="boton_principio">
-            <a href="#escape-rooms">Experiencias</a>
+            <a href="index2.html">Experiencias</a>
         </div>
     </section>
     
-    <!-- Popup de reserva -->
-    <div class="popup" id="popup">
-        <div class="top">
-            <h1>reserva</h1>
-            <i class="fa-solid fa-xmark" id="close"></i>
-        </div>
-        <form id="formulario">
-            <select name="room" id="room" title="room">
-                <option value="">Seleccionar Sala</option>
-                <option value="" id="5">Oficina 13</option>
-                <option value="" id="6">Biohazard</option>
-                <option value="" id="7">Cronos</option>
-                <option value="" id="8">Vhs</option>
-            </select>
-            <input type="datetime-local" name="fecha" id="fecha">
-            <input type="text" placeholder="Ingresa nombre" id="nom">
-            <input type="number" placeholder="Ingresa número de celular" id="cel">
-            <input type="submit" value="Reservar" id="res">
-        </form>
-    </div>
-
-
-    <!-- Sección Escape Rooms -->
-
-    <section class="contenedos_Cuartos" id="escape-rooms">
-        <h1> escape rooms</h1>
-        <div class="rooms-grid">
-            <!-- OFICINA 13 -->
-            <div class="room-container">
-                <a href="#info-1" class="cuarto cuarto1">
-                    <h1>oficina 13</h1>
-                </a>
-                <div class="room-info" id="info-1">
-                    <a href="#" class="close-btn">&times;</a>
-                    <h2>OFICINA 13</h2>
-                    <p>Te encuentras atrapado en una oficina después del horario laboral. Las puertas están cerradas con llave y solo tienes 60 minutos para resolver los acertijos y escapar.................</p>
-                    <p>Dificultad: Media</p>
-                    <div class="room-details">
-                        <div class="detail-item">
-                            <div class="detail-label">Jugadores</div>
-                            <div>2-6</div>
-                        </div>
-                        <div class="detail-item">
-                            <div class="detail-label">Duración</div>
-                            <div>60 min</div>
-                        </div>
-                        <div class="detail-item">
-                            <div class="detail-label">Precio</div>
-                            <div>$25/persona</div>
-                        </div>
-                    </div>
-                    <button class="book-btn btnPopup">Reservar</button>
-                </div>
-            </div>
-            
-            <!-- BIOHAZARD -->
-            <div class="room-container">
-                <a href="#info-2" class="cuarto cuarto2">
-                    <h1>biohazard</h1>
-                </a>
-                <div class="room-info" id="info-2">
-                    <a href="#" class="close-btn">&times;</a>
-                    <h2>BIOHAZARD</h2>
-                    <p>Un virus mortal se ha liberado en el laboratorio. Tu equipo tiene 75 minutos para encontrar el antídoto antes de que el aire se contamine por completo. Cuidado con lo que tocas...</p>
-                    <p>Dificultad: Alta</p>
-                    <div class="room-details">
-                        <div class="detail-item">
-                            <div class="detail-label">Jugadores</div>
-                            <div>3-8</div>
-                        </div>
-                        <div class="detail-item">
-                            <div class="detail-label">Duración</div>
-                            <div>75 min</div>
-                        </div>
-                        <div class="detail-item">
-                            <div class="detail-label">Precio</div>
-                            <div>$30/persona</div>
-                        </div>
-                    </div>
-                    <button class="book-btn btnPopup">Reservar</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="contenedos_Cuartos">
-        <div class="rooms-grid">
-            <!-- CRONOS -->
-            <div class="room-container">
-                <a href="#info-3" class="cuarto cuarto3">
-                    <h1>chronos</h1>
-                </a>
-                <div class="room-info" id="info-3">
-                    <a href="#" class="close-btn">&times;</a>
-                    <h2>CRONOS</h2>
-                    <p>Viaja en el tiempo para evitar que un científico loco altere el curso de la historia. Resuelve acertijos temporales en diferentes épocas para restaurar la línea temporal antes de que sea demasiado tarde.</p>
-                    <p>Dificultad: Media-Alta</p>
-                    <div class="room-details">
-                        <div class="detail-item">
-                            <div class="detail-label">Jugadores</div>
-                            <div>2-5</div>
-                        </div>
-                        <div class="detail-item">
-                            <div class="detail-label">Duración</div>
-                            <div>70 min</div>
-                        </div>
-                        <div class="detail-item">
-                            <div class="detail-label">Precio</div>
-                            <div>$28/persona</div>
-                        </div>
-                    </div>
-                    <button class="book-btn btnPopup">Reservar</button>
-                </div>
-            </div>
-            
-            <!-- VHS -->
-            <div class="room-container">
-                <a href="#info-4" class="cuarto cuarto4">
-                    <h1>vhs</h1>
-                </a>
-                <div class="room-info" id="info-4">
-                    <a href="#" class="close-btn">&times;</a>
-                    <h2>VHS</h2>
-                    <p>Encuentra la cinta maldita entre cientos de VHS en un videoclub de los 90. Cada cinta contiene pistas, pero solo una te permitirá escapar antes de quedar atrapado para siempre en esta pesadilla retro.</p>
-                    <p>Dificultad: Media</p>
-                    <div class="room-details">
-                        <div class="detail-item">
-                            <div class="detail-label">Jugadores</div>
-                            <div>2-4</div>
-                        </div>
-                        <div class="detail-item">
-                            <div class="detail-label">Duración</div>
-                            <div>60 min</div>
-                        </div>
-                        <div class="detail-item">
-                            <div class="detail-label">Precio</div>
-                            <div>$25/persona</div>
-                        </div>
-                    </div>
-                    <button class="book-btn btnPopup">Reservar</button>
-                </div>
-            </div>
-        </div>
-    </section>
     <!-- Sección Quiénes Somos -->
+     <div class="color"> </div>
     <section class="quienes-somos" id="quienes-somos">
         <h1>¿quienes somos?</h1>
-        
+        |
         <div class="features-container">
             <div class="box">
                 <div class="icon">
@@ -222,92 +80,46 @@
         
         </div>
     </section>
+</div>
+<div class="color">
+    <h1> galeria</h1><div class="tam"> <div id="carouselExampleIndicators" class="carousel slide">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://media.tacdn.com/media/attractions-splice-spp-674x446/06/73/12/c5.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="https://static.wixstatic.com/media/c87568_f5ab703a74a54c329170be50f5978a82~mv2.jpg/v1/fill/w_640,h_400,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/c87568_f5ab703a74a54c329170be50f5978a82~mv2.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="https://crossroadsescapegames.com/wp-content/uploads/2023/01/Weeping-Witch_1-scaled.jpg" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div> </div> </div>
+    
 
-    <!-- Sección Galería -->
-    <section class="galeria" id="galeria">
-        <h1>galeria</h1>
-        <div class="carrusel-container">
-            <div class="carrusel">
-                <div class="imagenes" id="imagenes">
-                    <img src="img/Group 164(1).png" alt="Sala 1">
-                    <img src="img/Group 167(1).png" alt="Sala 2">
-                    <img src="img/Group 169(1).png" alt="Sala 3">
-                    <img src="img/Group 164(1).png" alt="Sala 4">
-                    <img src="img/Group 167(1).png" alt="Sala 5">
-                    <img src="img/Group 169(1).png" alt="Sala 6">
-                </div>
-            </div>
-            
-            <div class="controles">
-                <div class="boton" id="prev">⟵</div>
-                <div class="boton" id="next">⟶</div>
-            </div>
-            
-            <div class="indicadores" id="indicadores">
-                <!-- Los indicadores se generan automáticamente con JavaScript -->
-            </div>
-        </div>
-    </section>
-    <script src="js/popup.js"></script>
+
+
+
+    <script src="js/popup.js"></script>    
+    <script src="js/indica.js"></script>
     <script type="module" src="js/registro.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const imagenes = document.getElementById('imagenes');
-            const totalImagenes = imagenes.children.length;
-            const imagenesPorGrupo = 3;
-            const totalGrupos = Math.ceil(totalImagenes / imagenesPorGrupo);
-            let grupoActual = 0;
-
-            // Crear indicadores
-            const indicadoresContainer = document.getElementById('indicadores');
-            for (let i = 0; i < totalGrupos; i++) {
-                const indicador = document.createElement('div');
-                indicador.className = 'indicador' + (i === 0 ? ' activo' : '');
-                indicador.addEventListener('click', () => {
-                    grupoActual = i;
-                    actualizarCarrusel();
-                    actualizarIndicadores();
-                });
-                indicadoresContainer.appendChild(indicador);
-            }
-
-            // Función para actualizar el carrusel
-            function actualizarCarrusel() {
-                const anchoContenedor = imagenes.parentElement.clientWidth;
-                const desplazamiento = grupoActual * anchoContenedor;
-                imagenes.style.transform = `translateX(-${desplazamiento}px)`;
-            }
-
-            // Función para actualizar indicadores
-            function actualizarIndicadores() {
-                const indicadores = document.querySelectorAll('.indicador');
-                indicadores.forEach((ind, index) => {
-                    ind.classList.toggle('activo', index === grupoActual);
-                });
-            }
-
-            // Eventos para los botones
-            document.getElementById('next').addEventListener('click', () => {
-                grupoActual = (grupoActual + 1) % totalGrupos;
-                actualizarCarrusel();
-                actualizarIndicadores();
-            });
-
-            document.getElementById('prev').addEventListener('click', () => {
-                grupoActual = (grupoActual - 1 + totalGrupos) % totalGrupos;
-                actualizarCarrusel();
-                actualizarIndicadores();
-            });
-
-            // Ajuste automático al cambiar tamaño de ventana
-            window.addEventListener('resize', actualizarCarrusel);
-            
-            // Inicializar carrusel
-            actualizarCarrusel();
-        });
-    </script>
+  
 
 </body>
+
  <footer>
         <div class="cipher-title"><h1>CIPHER</h1></div>
         <div class="footer-content">
@@ -337,6 +149,11 @@
             <i class="fa-brands fa-square-facebook"></i>
             <i class="fa-brands fa-instagram"></i>
             <i class="fa-brands fa-x-twitter"></i>
+            
         </div>
+        
     </footer>
+    <section class="color2">             <p>Cipher©2025. Todos los derechos reservados.</p>
+</section>
+
 </html>

@@ -1,0 +1,864 @@
+@font-face {
+    font-family: 'Plane';
+    src: url('../fonts/PlaneCrash.ttf');
+}
+@font-face {
+    font-family: 'Crafter';
+    src: url('../fonts/Crafter Signature Serif.ttf');
+}
+@font-face {
+    font-family: 'Leander';
+    src: url('../fonts/Leander.ttf');
+}
+        
+        :root {
+            --ColorPrincipal: #0C0C0B;
+            --botones: #FDD300;
+            --texto: #FFFFFF;
+            --borde: #A30000;
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--ColorPrincipal);
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        main {
+            flex: 1;
+        }
+        .uno{
+            font-family: 'Plane';
+        margin-top: 2.5%;
+        text-align: center;
+        font-size: 35px;
+        color: var(--texto);
+        }
+.cuart{
+  font-family: 'Crafter';
+        margin-top: -3%;  
+}
+        h1 {        font-family: 'Plane';
+        margin-top: -3%;
+       }
+h2{
+    color: var(--borde) ;
+}
+        /* HEADER */
+       header {
+    width: 100%;
+    background: #141312;
+    padding: 15px 20px;
+    border-bottom: 3px solid var(--borde);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+ header h1 {
+    font-size: 2em;
+    color: #A20000;
+    margin-bottom: -5px; }
+.header-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.logos{
+    display: grid;
+    width: 50%%;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+}
+.logos h1{
+    margin-left: 12em;
+    font-family: 'Plane';
+    color: var(--borde);
+    font-weight: normal;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav a {
+    margin: 5px 10px;
+    text-decoration: none;
+    color: var(--botones);
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    transition: color 0.3s;
+    font-family: 'Leander', sans-serif;
+}
+
+nav a:hover {
+    color: white;
+}
+
+        /* SECCIÓN ESCAPE ROOMS */
+        .contenedos_Cuartos {
+            padding: 2rem 1rem;
+            text-align: center;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .contenedos_Cuartos h1 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .room-container {
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto 30px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
+            display: flex;
+            height: 250px;
+        }
+
+        .cuarto {
+            flex: 1;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .cuarto::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+        }
+
+        .cuarto h1 {
+            position: relative;
+            z-index: 1;
+            color: rgb(255, 255, 255);
+            font-size: 2rem;
+            text-transform: uppercase;
+        }
+
+        .room-info {
+            flex: 0;
+            overflow: hidden;
+            background: #1a1a1a;
+            transition: all 0.3s ease;
+            padding: 0;
+            opacity: 0;
+
+        }
+
+    
+
+        .close-btn {
+            display: none;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(0,0,0,0.7);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+            z-index: 10;
+        }
+
+        .room-container.active .close-btn {
+            display: block;
+        }
+
+        .room-info h2 {
+            color: var(--borde);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            font-family: 'Leander', sans-serif;
+
+
+        }
+
+        .room-info p {
+            margin-bottom: 1rem;
+            line-height: 1.5;
+            font-family: 'Leander', sans-serif;
+            color: var(--texto);
+            font-size: 1rem;
+
+        }
+
+        .room-details {
+            display: flex;
+            justify-content: space-between;
+            margin: 1.5rem 0;
+            font-family: 'Leander', sans-serif;
+            color: var(--texto);
+
+        }
+
+        .detail-item {
+            text-align: center;
+        }
+
+        .detail-label {
+            font-weight: bold;
+            color: var(--botones);
+            margin-bottom: 0.5rem;
+        }
+
+        .book-btn {
+            background: var(--botones);
+            color: var(--ColorPrincipal);
+            border: none;
+            padding: 10px 20px;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            transition: background 0.3s;
+            color: #FFFFFF;
+                    font-family: 'Leander', sans-serif;
+
+        }
+
+        .book-btn:hover {
+            background: #ffdf40;
+        }
+
+        /* Imágenes de fondo */
+    .cuarto1 { background-image: url(https://interpretaciondelossuenos.com/wp-content/uploads/2022/04/escape-room-1.jpg); }
+.cuarto2 { background-image: url("../img/DiningArea-MainHouse1F-RE7.png"); }
+.cuarto3 { background-image: url(https://blogs.eltiempo.com/sabias-que/wp-content/uploads/sites/791/2018/12/Ambientaci%C3%B3n-Escape-Room-1024x684.jpg); }
+.cuarto4 { background-image: url(https://interpretaciondelossuenos.com/wp-content/uploads/2022/04/escape-room-1.jpg); }
+
+        /* POPUP */
+        .popup {
+            width: 90vw;
+            height: 50vh;
+            position: fixed;
+            top: 30vh;
+            left: 5%;
+            background: #181715;
+            z-index: 9999;
+            border-radius: 5px;
+            box-shadow: 0 0 0 1000px rgba(0, 0, 0, 0.438);
+            text-align: center;
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity 0.3s, visibility 0.3s;
+        }
+
+        .popup.active {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .top {
+            width: 100%;
+            height: 15%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            
+        }
+
+        .top h1 {|
+            font-family: 'Plane', sans-serif;
+            font-weight: normal;
+            margin: 0;
+            margin-top: 8%;
+            color: var(--texto);
+            
+        }
+
+        .top i {
+            font-size: 2.4em;
+            position: absolute;
+            right: 5%;
+            cursor: pointer;
+
+        }
+
+        .popup form {
+            width: 100%;
+            height: 80%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .popup form select,
+        .popup form input {
+            width: 60%;
+            padding: 12px;
+            background: none;
+            outline: none;
+            border: none;
+            border-bottom: 2px solid white;
+            color: white;
+            font-size: 1rem;
+        }
+
+        .popup form select option {
+            background: #202020;
+        }
+
+        .popup form #res {
+            background: var(--botones);
+            color: black;
+            font-weight: bold;
+            border: none;
+            text-transform: uppercase;
+            border-radius: 10px;
+            transition: all 0.3s;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        .popup form #res:hover {
+            background: #ffdf40;
+        }
+
+        /* FOOTER */
+       footer {
+    width: 100%;
+    background-color: var(--ColorPrincipal);
+    border-top: 3px solid var(--borde);
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 8%;
+}
+
+.cipher-title {
+    font-size: 1.5em;
+    text-align: center;
+    letter-spacing: 2px;
+    font-family: 'Plane', sans-serif;
+    text-transform: lowercase;
+    align-content: center;
+}
+
+footer h1 {
+    color: #A20000;
+
+}
+
+.footer-content {
+    align-content: center;
+    text-align: center;
+    margin-top: -50px;
+}
+
+.address,
+.phone,
+.email {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    font-size: 0.66em;
+    margin-left: 10%;
+    padding: 10px;
+}
+
+.address svg,
+.phone svg,
+.email svg {
+    color: #ffffff;
+}
+
+.cipher-socials {
+    align-content: center;
+}
+
+.cipher-socials i {
+    font-size: 2em;
+    margin: 10px;
+}
+
+.copyright {
+    margin-top: 25px;
+    font-size: 13px;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px;
+    background-color: #000000;
+}
+
+footer img {
+    width: 10%;
+    justify-content: center;
+}
+
+        /* MEDIA QUERIES */
+        @media (min-width: 768px) {
+               header{
+        padding: 0;
+    }
+    .header-container{
+        width: 100%;
+        flex-direction: row;
+        justify-content: start;
+        padding: 10px;
+    }
+    .logos{
+        width: 25%;
+        justify-content: start;
+        margin-bottom: -25px;
+    }
+    header {
+    width: 100%;
+    background: #141312;
+    padding: 15px 20px;
+    border-bottom: 3px solid var(--borde);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+ header h1 {
+    font-size: 3em;
+    color: #A20000;
+    margin-bottom: -30px;
+    margin-top: 1px;
+    margin-left: -30px;
+ }
+.
+.logos{
+    display: grid;
+    width: 30%;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    width: 80px;
+    height: 80px;
+
+}
+.logos h1{
+    margin-left: -3em;
+    font-family: 'Plane';
+    color: var(--borde);
+    font-weight: normal;
+       
+}
+    nav a{
+        font-size: 0.8em;
+        margin: 5%;
+        padding-bottom: -100px;
+    }
+    a{
+padding-top: 2.5%;
+
+    }
+            .popup {
+                width: 70vw;
+                height: 50vh;
+                top: 25vh;
+                left: 15%;
+            }
+                    .room-container.active .cuarto {
+                flex: 0 0 40%;
+            }
+
+            .room-container.active .room-info {
+                flex: 1;
+                opacity: 1;
+                padding: 20px;
+            }
+               .room-container {
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto 30px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
+            display: flex;
+            height: 350px;
+        }
+        
+      
+        .popup.active {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .top {
+            width: 100%;
+            height: 15%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            
+        }
+
+        .top h1 {|
+            font-family: 'Plane', sans-serif;
+            font-weight: normal;
+            margin: 0;
+            margin-top: 10%;
+
+            color: var(--texto);
+            
+        }
+
+        .top i {
+            font-size: 2.4em;
+            position: absolute;
+            right: 5%;
+            cursor: pointer;
+
+        }
+
+        .popup form {
+            width: 100%;
+            height: 80%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .popup form select,
+        .popup form input {
+            width: 70%;
+            padding: 12px;
+            background: none;
+            outline: none;
+            border: none;
+            border-bottom: 2px solid white;
+            color: white;
+            font-size: 1rem;
+        }
+
+        .popup form select option {
+            background: #202020;
+        }
+
+        .popup form #res {
+            background: var(--botones);
+            color: black;
+            font-weight: bold;
+            border: none;
+            text-transform: uppercase;
+            border-radius: 10px;
+            transition: all 0.3s;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .popup form #res:hover {
+            background: #ffdf40;
+        }
+         footer {
+        flex-direction: row;
+        padding: 20px;
+        justify-content: space-between;
+        
+        
+    }
+
+   
+    .footer-content{
+        width: 50%;
+        margin-top: 2%;
+        
+    }
+    .address,
+    .phone,
+    .email {
+        font-size: 0.7em;
+    }
+        }
+
+        @media (max-width: 768px) {
+            .room-container {
+                flex-direction: column;
+                height: auto;
+            }
+
+            .cuarto {
+                height: 200px;
+                flex: none;
+            }
+
+            .room-info {
+                max-height: 0;
+            }
+
+            .room-container.active .room-info {
+                max-height: 500px;
+                opacity: 1;
+                padding: 20px;
+            }
+        }
+
+        @media (min-width: 1024px) {
+       
+        .uno{ font-size: 3em;
+            
+        }
+       .contenedos_Cuartos h1 {
+            font-size: 3rem;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .room-info h2 {
+            color: var(--borde);
+            margin-bottom: 1rem;
+            font-size: 2rem;
+            font-family: 'Leander', sans-serif;
+
+
+        }
+
+        .room-info p {
+            margin-bottom: 1rem;
+            line-height: 1.5;
+            font-size: 1.2rem;
+            font-family: 'Leander', sans-serif;
+            color: var(--texto);
+
+        }
+
+        .room-details {
+            display: flex;
+            justify-content: space-between;
+            margin: 1.5rem 0;
+            font-family: 'Leander', sans-serif;
+            color: var(--texto);
+
+        }
+
+        .detail-item {
+            text-align: center;
+        }
+
+        .detail-label {
+            font-weight: bold;
+            color: var(--botones);
+            margin-bottom: 0.5rem;
+        }
+
+        .book-btn {
+            background: var(--botones);
+            color: var(--ColorPrincipal);
+            border: none;
+            padding: 10px 20px;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            transition: background 0.3s;
+            color: #FFFFFF;
+                    font-family: 'Leander', sans-serif;
+
+        }
+
+        .book-btn:hover {
+            background: #ffdf40;
+        }
+     header{
+        padding: 0;
+    }
+    .header-container{
+        width: 100%;
+        flex-direction: row;
+        justify-content: start;
+        padding: 10px;
+    }
+    .logos{
+        width: 25%;
+        justify-content: start;
+        margin-bottom: -25px;
+    }
+    header {
+    width: 100%;
+    background: #141312;
+    padding: 15px 20px;
+    border-bottom: 3px solid var(--borde);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+ header h1 {
+    font-size: 4em;
+    color: #A20000;
+    margin-bottom: -30px;
+    margin-top: 1px;
+    margin-left: -80px;
+ }
+.
+.logos{
+    display: grid;
+    width: 30%;
+    justify-content: center;
+    align-items: center;
+    margin-left: -200000px;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+
+}
+.logos h1{
+    margin-left: 10em;
+    font-family: 'Plane';
+    color: var(--borde);
+    font-weight: normal;
+       
+}
+    nav a{
+        font-size: 1em;
+        margin: 5%;
+        padding-bottom: -100px;
+    }
+    a{
+padding-top: 2.5%;
+
+    }
+    /* popup */
+    .popup {
+        width: 40vw;
+        height: 70vh;
+        position: fixed;
+        top: 15%;
+    left: 30%;
+        background: #181715;
+        z-index: 999;
+        border-radius: 5px;
+        box-shadow: 0 0 0 1000px rgba(0, 0, 0, 0.438);
+        text-align: center;
+        visibility: hidden;
+    font-family: 'Crafter', sans-serif;
+
+    }
+ .room-container {
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto 30px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
+            display: flex;
+            height: 350px;
+        }
+
+    .top {
+        width: 100%;
+        height: 20%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .top h1 {
+        font-family: 'Plane', sans-serif;
+        font-weight: normal;
+        color: #FFFFFF;
+        margin-top: 10%;
+    }
+
+    .top i {
+        font-size: 2.4em;
+        position: absolute;
+        right: 5%;
+        cursor: pointer;
+        
+    }
+
+    .popup form {
+        width: 100%;
+        height: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .popup form select {
+        width: 60%;
+        padding: 1%;
+        background: none;
+        outline: none;
+        border: none;
+        border-bottom: 2px solid white;
+        color: white;
+    }
+
+    .popup form select option {
+        background: #131313;
+    }
+            .color2{
+    background-color: var(--ColorPrincipal);
+    border-bottom: 3px solid var(--ColorPrincipal);
+}
+.color2 p{
+    text-align: center;
+    color: var(--texto);
+}
+  footer {
+        flex-direction: row;
+        padding: 20px;
+        justify-content: space-between;
+        
+        
+    }
+
+   
+    .footer-content{
+        width: 50%;
+        margin-top: 2%;
+        
+    }
+    .address,
+    .phone,
+    .email {
+        font-size: 1em;
+    }
+        }
