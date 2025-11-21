@@ -283,12 +283,12 @@ h4{
     width: 100%;
     margin-bottom: 8%;
 }
-.imagen1{ width: 30%;}
-.imagen2{ width: 56%;}
-.imagen3{ width: 30%;}
-.imagen4{ width: 40%;}
-.imagen5{ width: 40%;}
-.imagen6{ width: 40%;}
+.imagen1{ width: 23%;}
+.imagen2{ width: 26%;}
+.imagen3{ width: 23%;}
+.imagen4{ width: 26%;}
+.imagen5{ width: 26%;}
+.imagen6{ width: 26%;}
 
         /* Imagen del producto en el modal */
         .modal-image {
@@ -679,7 +679,9 @@ nav a:hover {
     padding-top: 3%;
     margin-top: 10%;
 }
-
+span{
+    font-size: 0.9em;
+}
 .cipher-title {
     font-size: 1.5em;
     text-align: center;
@@ -1056,7 +1058,16 @@ h4{
         @media (min-width: 1024px) {
        /* Estilos para las imágenes en las tarjetas */
 
-
+.product-image{
+    width: 100%;
+    margin-bottom: 8%;
+}
+.imagen1{ width: 30%;}
+.imagen2{ width: 56%;}
+.imagen3{ width: 30%;}
+.imagen4{ width: 40%;}
+.imagen5{ width: 40%;}
+.imagen6{ width: 40%;}
 /* Estilos para la imagen en el modal */
 #modalImage {
     width: 100%;

@@ -10,7 +10,10 @@
     font-family: 'Leander';
     src: url('../fonts/Leander.ttf');
 }
+    
         
+       
+
         :root {
             --ColorPrincipal: #0C0C0B;
             --botones: #FDD300;
@@ -35,6 +38,8 @@
             min-height: 100vh;
             display: flex;
             flex-direction: column;
+            
+           
         }
 
         main {
@@ -56,6 +61,7 @@
        }
 h2{
     color: var(--borde) ;
+     font-family: 'Crafter';
 }
         /* HEADER */
        header {
@@ -66,7 +72,315 @@ h2{
     position: sticky;
     top: 0;
     z-index: 100;
+} 
+.marge{
+    background-color: var(--ColorPrincipal);
 }
+/* Contenedor principal con ancho máximo */
+      
+   /* Estilos para las tarjetas de productos */
+        .product-card {
+            background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.12)); /* Gradiente sutil */
+            border-radius: 12px; /* Esquinas redondeadas */
+            overflow: hidden; /* Oculta contenido que sobresalga */
+            box-shadow: 0 6px 18px rgba(0,0,0,0.6); /* Sombra */
+            transition: transform .18s ease, box-shadow .18s ease; /* Transiciones suaves */
+            height: 350px; /* Ocupa toda la altura disponible */
+            border:  solid var(--ColorPrincipal);
+        }
+
+        /* Efecto hover para las tarjetas */
+        .product-card:hover {
+            transform: translateY(-6px); /* Levanta la tarjeta */
+            box-shadow: 0 14px 30px rgba(0,0,0,0.7); /* Sombra más pronunciada */
+        }
+
+        /* Área de imagen del producto */
+        .product-image {
+            height: 180px; /* Altura fija */
+            width: 100%; /* Ancho completo */
+            display: flex;
+            align-items: center; /* Centra verticalmente */
+            justify-content: center; /* Centra horizontalmente */
+            color: rgb(255, 255, 255);
+            font-weight: bold;
+            text-align: center;
+            padding: 15px; /* Espacio interno */
+            background-color: var(--texto);
+        }
+
+        /* Título del producto */
+        .product-title {
+            font-weight: 600; /* Negrita */
+            font-size: 0.98rem; /* Tamaño de fuente */
+            min-height: 2.2em; /* Altura mínima para alinear títulos */
+            color: #ffffff; /* Color claro */
+            margin-bottom: 0.5rem; /* Espacio inferior */
+        }
+
+        /* Duración del producto */
+        .product-pre {
+            color: #ffffff; /* Color gris claro */
+            font-weight: 600; /* Negrita */
+            font-size: 0.95rem; /* Tamaño de fuente */
+            margin-bottom: 0.5rem; /* Espacio inferior */
+        }
+
+        /* Botón de compra */
+        .buy-btn {
+            
+            background: #ffcc00; /* Color amarillo */
+            color: #111; /* Texto oscuro */
+            font-weight: 700; /* Negrita */
+            border-radius: 6px; /* Esquinas redondeadas */
+            width: 100%; /* Ancho completo */
+            height: 50px;
+            border: none; /* Sin borde */
+            padding: 8px 12px; /* Espacio interno */
+            transition: filter 0.2s; /* Transición para efecto hover */
+        }
+        .card-body{
+            background-color: var(--ColorPrincipal);
+
+        }
+
+        /* Efecto hover para el botón */
+        .buy-btn:hover {
+            filter: brightness(.95); /* Oscurece ligeramente */
+        }
+
+    
+        /* Encabezado de la página */
+        .header-section {
+            text-align: center; /* Texto centrado */
+            margin-bottom: 30px; /* Espacio inferior */
+            padding: 20px; /* Espacio interno */
+                        color: #ffffff; /* Color claro */
+
+        }
+
+        /* Título principal */
+        h1 {
+            color: #ffffff; /* Color claro */
+            margin-bottom: 10px; /* Espacio inferior */
+        }
+.color2{
+    background-color: var(--ColorPrincipal);
+    margin-bottom: -10%;
+    text-align: center;
+    color: var(--texto);
+}
+        /* Subtítulo */
+        .subtitle {
+            color: #bfbfbf; /* Color gris */
+            
+        }
+
+        /* ========== ESTILOS DEL MODAL ========== */
+
+        /* Fondo oscuro del modal */
+        .modal-overlay {
+            display: none; /* Oculto por defecto */
+            position: fixed; /* Posición fija en la pantalla */
+            top: 0;
+            left: 0;
+            width: 100%; /* Ancho completo */
+            height: 100%; /* Alto completo */
+            background-color: rgba(0,0,0,0.8); /* Fondo semitransparente */
+            z-index: 1000; /* Por encima de todo */
+            justify-content: center; /* Centra horizontalmente */
+            align-items: center; /* Centra verticalmente */
+        }
+
+        /* Contenedor del contenido del modal */
+        .modal-content {
+            background: linear-gradient(180deg, rgba(40,40,40,0.95), rgba(20,20,20,0.98)); /* Gradiente oscuro */
+            width:70%; /* Ancho del 90% de la pantalla */
+            height: 100%;            
+            max-height: 550px;
+            max-width: 350px; /* Ancho máximo */
+            border-radius: 12px; /* Esquinas redondeadas */
+            padding: 0; /* Sin padding interno */
+            overflow: hidden; /* Oculta contenido que sobresalga */
+            box-shadow: 0 10px 30px rgba(0,0,0,0.8); /* Sombra */
+        }
+
+        /* Encabezado del modal */
+       .modal-header {
+            padding: 1.2rem 1.5rem; /* Espacio interno */
+            background: rgba(30,30,30,0.9); /* Fondo oscuro */
+            display: flex;
+            justify-content: space-between; /* Espacio entre título y botón cerrar */
+            align-items: center; /* Centra verticalmente */
+            margin-bottom: 6%;
+        }
+#modalImage {
+    width: 100%;
+    max-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+#modalPrice{
+    margin-top: -13%
+}
+#modalImage img {
+    width: 40%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+#cancelBtn{
+    margin-top: -5%;
+        margin-bottom: 4%;
+margin-right: 5%;
+}
+#confirmBtn{
+        margin-top: -5%;
+
+    margin-bottom: 4%;
+    margin-right: 5%;
+
+}
+#modalDuration{
+    margin-right: 6%;
+}
+span{
+    margin-left: 3%;
+}
+.detail-value{
+    margin-right: 5%;
+
+}
+h4{
+    margin-left: 3%;
+}
+
+.modal-footer{
+    display: flex;
+    flex-direction: row;
+    grid-area: 30%;
+
+}
+        
+        /* Botón para cerrar el modal */
+        .close-btn {
+            background: none; /* Sin fondo */
+            border: none; /* Sin borde */
+            color: #bfbfbf; /* Color gris */
+            font-size: 1.5rem; /* Tamaño grande */
+            cursor: pointer; /* Cursor de mano */
+        }
+
+        /* Efecto hover para el botón cerrar */
+        .close-btn:hover {
+            color: #f1f1f1; /* Color claro al pasar el mouse */
+        }
+
+        /* Cuerpo del modal */
+        .modal-body {
+            padding: 0.8rem; /* Espacio interno */
+        }
+.product-image{
+    width: 100%;
+    margin-bottom: 8%;
+}
+.imagen1{ width: 30%;}
+.imagen2{ width: 56%;}
+.imagen3{ width: 30%;}
+.imagen4{ width: 40%;}
+.imagen5{ width: 40%;}
+.imagen6{ width: 40%;}
+
+        /* Imagen del producto en el modal */
+        .modal-image {
+            height: 200px; /* Altura fija */
+            border-radius: 8px; /* Esquinas redondeadas */
+            margin-bottom: 1.5rem; /* Espacio inferior */
+            display: flex;
+            align-items: center; /* Centra verticalmente */
+            justify-content: center; /* Centra horizontalmente */
+            font-weight: bold;
+            text-align: center;
+            padding: 15px; /* Espacio interno */
+        }
+
+        /* Título del producto en el modal */
+        .modal-product-title {
+            font-size: 1.3rem; /* Tamaño de fuente */
+            font-weight: 600; /* Negrita */
+            color: #f1f1f1; /* Color claro */
+            margin-bottom: 1rem; /* Espacio inferior */
+        }
+
+        /* Elementos de detalle (duracción, disponibilidad, envío) */
+        .detail-item {
+            display: flex; /* Diseño flexible */
+            justify-content: space-between; /* Espacio entre label y valor */
+            padding: 0.7rem 0; /* Espacio vertical */
+        }
+
+        /* Etiqueta del detalle */
+        .detail-label {
+            color: #bfbfbf; /* Color gris */
+        }
+
+        /* Valor del detalle */
+        .detail-value {
+            color: #f1f1f1; /* Color claro */
+            font-weight: 500; /* Peso de fuente medio */
+        }
+
+        /* Precio del producto en el modal */
+        .product-price {
+            font-size: 1.8rem; /* Tamaño grande */
+            font-weight: 700; /* Negrita */
+            color: #ffcc00; /* Color amarillo */
+            text-align: center; /* Texto centrado */
+            margin: 1.5rem 0; /* Espacio vertical */
+        }
+
+        /* Pie del modal */
+        .modal-footer {
+            padding: 1.2rem 1.5rem; /* Espacio interno */
+            background: rgba(30,30,30,0.9); /* Fondo oscuro */
+            display: flex;
+            justify-content: space-between; /* Espacio entre botones */
+            margin-top: 5%;
+        }
+
+        /* Botón cancelar */
+        .btn-cancel {
+            background: #444; /* Fondo gris oscuro */
+            color: #f1f1f1; /* Texto claro */
+            border: none; /* Sin borde */
+            border-radius: 6px; /* Esquinas redondeadas */
+            padding: 10px 20px; /* Espacio interno */
+            font-weight: 600; /* Negrita */
+        }
+
+        /* Efecto hover para botón cancelar */
+        .btn-cancel:hover {
+            background: #555; /* Fondo más claro */
+        }
+
+        /* Botón confirmar compra */
+        .btn-confirm {
+            background: #ffcc00; /* Color amarillo */
+            color: #111; /* Texto oscuro */
+            border: none; /* Sin borde */
+            border-radius: 6px; /* Esquinas redondeadas */
+            padding: 10px 20px; /* Espacio interno */
+            font-weight: 700; /* Negrita */
+        }
+
+        /* Efecto hover para botón confirmar */
+        .btn-confirm:hover {
+            filter: brightness(.95); /* Oscurece ligeramente */
+        }
  header h1 {
     font-size: 2em;
     color: #A20000;
@@ -108,7 +422,7 @@ nav a {
     text-decoration: none;
     color: var(--botones);
     text-transform: uppercase;
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     transition: color 0.3s;
     font-family: 'Leander', sans-serif;
 }
@@ -123,6 +437,7 @@ nav a:hover {
             text-align: center;
             margin: 0 auto;
             width: 100%;
+            background-color: var(--ColorPrincipal);
         }
 
         .contenedos_Cuartos h1 {
@@ -358,18 +673,24 @@ nav a:hover {
             background: #ffdf40;
         }
 
-        /* FOOTER */
+ /* FOOTER */
        footer {
     width: 100%;
     background-color: var(--ColorPrincipal);
-    border-top: 3px solid var(--borde);
     color: #ffffff;
     display: flex;
     flex-direction: column;
     text-align: center;
-    padding-top: 8%;
+    padding-top: 3%;
+    border-top: solid 3px var(--borde);
+  
 }
-
+span{
+    font-size: 0.9em;
+}
+.co{
+    background-color: var(--ColorPrincipal);
+}
 .cipher-title {
     font-size: 1.5em;
     text-align: center;
@@ -377,6 +698,7 @@ nav a:hover {
     font-family: 'Plane', sans-serif;
     text-transform: lowercase;
     align-content: center;
+    margin-bottom: 8%;
 }
 
 footer h1 {
@@ -429,6 +751,8 @@ footer img {
     width: 10%;
     justify-content: center;
 }
+
+
 
         /* MEDIA QUERIES */
         @media (min-width: 768px) {
@@ -601,7 +925,113 @@ padding-top: 2.5%;
         
     }
 
-   
+     .modal-overlay {
+            display: none; /* Oculto por defecto */
+            position: fixed; /* Posición fija en la pantalla */
+            top: 0;
+            left: 0;
+            width: 100%; /* Ancho completo */
+            height: 100%; /* Alto completo */
+            background-color: rgba(0,0,0,0.8); /* Fondo semitransparente */
+            z-index: 1000; /* Por encima de todo */
+            justify-content: center; /* Centra horizontalmente */
+            align-items: center; /* Centra verticalmente */
+        }
+
+        /* Contenedor del contenido del modal */
+        .modal-content {
+            background: linear-gradient(180deg, rgba(40,40,40,0.95), rgba(20,20,20,0.98)); /* Gradiente oscuro */
+            width:100%; /* Ancho del 90% de la pantalla */
+            height: 100%;            
+            max-height: 550px;
+            max-width: 600px; /* Ancho máximo */
+            border-radius: 12px; /* Esquinas redondeadas */
+            padding: 0; /* Sin padding interno */
+            overflow: hidden; /* Oculta contenido que sobresalga */
+            box-shadow: 0 10px 30px rgba(0,0,0,0.8); /* Sombra */
+        }
+
+        /* Encabezado del modal */
+        .modal-header {
+            padding: 1.2rem 1.5rem; /* Espacio interno */
+            background: rgba(30,30,30,0.9); /* Fondo oscuro */
+            display: flex;
+            justify-content: space-between; /* Espacio entre título y botón cerrar */
+            align-items: center; /* Centra verticalmente */
+            margin-bottom: 6%;
+        }
+#modalImage {
+    width: 100%;
+    max-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+#modalPrice{
+    margin-top: -13%
+}
+#modalImage img {
+    width: 40%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+#cancelBtn{
+    margin-top: -5%;
+        margin-bottom: 4%;
+margin-right: 5%;
+}
+#confirmBtn{
+        margin-top: -5%;
+
+    margin-bottom: 4%;
+    margin-right: 5%;
+
+}
+#modalDuration{
+    margin-right: 6%;
+}
+span{
+    margin-left: 3%;
+}
+.detail-value{
+    margin-right: 5%;
+
+}
+h4{
+    margin-left: 3%;
+}
+
+.modal-footer{
+    display: flex;
+    flex-direction: row;
+    grid-area: 30%;
+
+}
+        /* Título del modal */
+     
+
+        /* Botón para cerrar el modal */
+        .close-btn {
+            background: none; /* Sin fondo */
+            border: none; /* Sin borde */
+            color: #bfbfbf; /* Color gris */
+            font-size: 1.5rem; /* Tamaño grande */
+            cursor: pointer; /* Cursor de mano */
+        }
+
+        /* Efecto hover para el botón cerrar */
+        .close-btn:hover {
+            color: #f1f1f1; /* Color claro al pasar el mouse */
+        }
+
+        /* Cuerpo del modal */
+        .modal-body {
+            padding: 1.5rem; /* Espacio interno */
+        }
     .footer-content{
         width: 50%;
         margin-top: 2%;
@@ -637,7 +1067,27 @@ padding-top: 2.5%;
         }
 
         @media (min-width: 1024px) {
-       
+       /* Estilos para las imágenes en las tarjetas */
+
+
+/* Estilos para la imagen en el modal */
+#modalImage {
+    width: 100%;
+    max-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+#modalImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
         .uno{ font-size: 3em;
             
         }
@@ -797,7 +1247,14 @@ padding-top: 2.5%;
         justify-content: center;
         align-items: center;
     }
-
+.modal-header {
+            padding: 1.2rem 1.5rem; /* Espacio interno */
+            background: rgba(30,30,30,0.9); /* Fondo oscuro */
+            display: flex;
+            justify-content: space-between; /* Espacio entre título y botón cerrar */
+            align-items: center; /* Centra verticalmente */
+            margin-bottom: 6%;
+        }
     .top h1 {
         font-family: 'Plane', sans-serif;
         font-weight: normal;
@@ -834,7 +1291,18 @@ padding-top: 2.5%;
     .popup form select option {
         background: #131313;
     }
-            .color2{
+            
+  footer {
+        flex-direction: row;
+        padding: 10px;
+        justify-content: space-between;
+        
+        
+    }
+.product-card{
+    margin-bottom: 9%;
+}
+   .color2{
     background-color: var(--ColorPrincipal);
     border-bottom: 3px solid var(--ColorPrincipal);
 }
@@ -842,15 +1310,6 @@ padding-top: 2.5%;
     text-align: center;
     color: var(--texto);
 }
-  footer {
-        flex-direction: row;
-        padding: 20px;
-        justify-content: space-between;
-        
-        
-    }
-
-   
     .footer-content{
         width: 50%;
         margin-top: 2%;
@@ -862,3 +1321,4 @@ padding-top: 2.5%;
         font-size: 1em;
     }
         }
+        
